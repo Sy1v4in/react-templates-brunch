@@ -1,0 +1,34 @@
+{
+  "name": "react-templates-brunch",
+  "version": "1.8.3",
+  "description": "Adds React-Templates support to brunch.",
+  "author": "Sylvain Fraïssé",
+  "license": "MIT",
+  "homepage": "https://github.com/fraisse/react-templates-brunch",
+  "keywords": [
+    "react-templates",
+    "brunch",
+    "plugin",
+    "rt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fraisse/react-templates-brunch.git"
+  },
+  "peerDependencies": {
+    "brunch": "~1.8"
+  },
+  "main": "./lib/index",
+  "scripts": {
+    "prepublish": "rm -rf lib && coffee --bare --output lib/ src/",
+    "test": "node_modules/.bin/mocha --recursive test/src"
+  },
+  "dependencies": {
+    "coffee-script": "^1.9.3",
+    "react-templates": "^0.1.20"
+  },
+  "devDependencies": {
+    "mocha": "1.11.0",
+    "must": "^0.12.0"
+  }
+}
